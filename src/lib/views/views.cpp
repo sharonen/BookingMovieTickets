@@ -30,7 +30,9 @@ json Views::getMovies()
 json Views::getTheaters(string movieName)
 {
     json j;
+    // get all the theaters showing the given movie from the database
     auto movieTheaters = DB::getInstance().getMovieTheaters(movieName);
+    // return the theaters in the form of json
     for (auto movieTheater : movieTheaters)
     {
         j.push_back({{"name", movieTheater->getTheater()->getTheaterName()}, {"location", movieTheater->getTheater()->getTheaterLocation()}});
@@ -43,11 +45,13 @@ json Views::getAvailableSeats(string movieName, string theaterName)
 {
     json j;
     auto movieTheater = DB::getInstance().getMovieTheater(movieName, theaterName);
+    // return false if the movie or theater does not exist
     if (movieTheater == nullptr)
     {
         return {{"status", "failed"}, {"message", "The movie or theater does not exist"}};
     }
     auto seats = movieTheater->getAvailableSeats();
+    // return the available seats in the form of json
     for (auto seat : seats)
     {
         char seatRow = seat[0];
@@ -61,6 +65,7 @@ json Views::getAvailableSeats(string movieName, string theaterName)
 json Views::bookSeats(vector<string> seatNumbers, string movieName, string theaterName)
 {
     auto movieTheater = DB::getInstance().getMovieTheater(movieName, theaterName);
+    // return false if the movie or theater does not exist
     if (movieTheater == nullptr)
     {
         return {{"status", "failed"}, {"message", "The movie or theater does not exist"}};

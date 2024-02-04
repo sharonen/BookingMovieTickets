@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// Constructor for Theater
 Theater::Theater(int theaterCapacity, string theaterName, string theaterLocation)
 {
     this->theaterCapacity = theaterCapacity;

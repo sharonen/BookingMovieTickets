@@ -1,5 +1,6 @@
 #include "movieTheater.hpp"
 
+// Constructor for MovieTheater
 MovieTheater::MovieTheater(Movie *movie, Theater *theater)
 {
     this->movie = movie;

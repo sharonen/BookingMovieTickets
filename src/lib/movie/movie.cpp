@@ -1,5 +1,6 @@
 #include "movie.hpp"
 
+// Constructor for Movie
 Movie::Movie(string name, string description)
 {
     movieName = name;
