@@ -24,3 +24,15 @@ string Theater::getTheaterLocation()
 {
     return theaterLocation;
 }
+
+// Set the theater name
+void Theater::setTheaterName(string theaterName)
+{
+    this->theaterName = theaterName;
+}
+
+// Set the theater location
+void Theater::setTheaterLocation(string theaterLocation)
+{
+    this->theaterLocation = theaterLocation;
+}

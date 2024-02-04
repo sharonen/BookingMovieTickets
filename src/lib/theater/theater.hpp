@@ -45,6 +45,18 @@ public:
      * @return the location of the theater
      */
     string getTheaterLocation();
+
+    /*
+     * Set the theater name
+     * @param theaterName - the name of the theater
+     */
+    void setTheaterName(string theaterName);
+
+    /*
+     * Set the theater location
+     * @param theaterLocation - the location of the theater
+     */
+    void setTheaterLocation(string theaterLocation);
 };
 
 #endif

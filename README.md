@@ -8,7 +8,7 @@
 
 # The project has the following structure:
 1. src: Contains the source code for the project
-2. test: Contains the unit tests for the project
+2. unit_test: Contains the unit tests for the project
 3. CMakeLists.txt: The main CMake file for the project
 4. conanfile.py: The conan file for the project
 
@@ -19,19 +19,19 @@
 4. DB: Represents a database for the project
 5. Views: Represents a class with API calls for the project
 
-# The project has the following unit tests:
-1. TestMovie: Tests the Movie class
-2. TestTheater: Tests the Theater class
-3. TestMovieTheater: Tests the MovieTheater class
-4. TestDB: Tests the DB class
-5. TestViews: Tests the Views class
-
 # The project has the following API calls:
 1. GetMovies: Gets all the movies from the database
 2. GetTheatersByMovie: Gets all the movie theaters for a specific movie from the database
 8. GetAvailableSeats: Gets all the available seats for a specific movie and a specific theater from the database
 9. BookSeats: Books seats for a specific movie and a specific theater from the database
 
+
+# The project has the following unit tests:
+1. TestMovie: Tests the Movie class
+2. TestTheater: Tests the Theater class
+3. TestMovieTheater: Tests the MovieTheater class
+4. TestDB: Tests the DB class
+5. TestViews: Tests the Views class
 
 # Installation and Build using CMake and Conan
 
@@ -50,3 +50,11 @@
 
 1. cd BookingMovieTickets/build
 2. ctest -V 
+
+
+# Next Steps:
+
+1. Add a support for running the project in a container
+2. Add a support for running HTTP requests, using something like Crow https://crowcpp.org/master/
+3. Add support to generate documentation using Doxygen
+4. Add a support for running the project in a cloud environment, using something like AWS Lambda

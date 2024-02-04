@@ -21,10 +21,7 @@ class DB
     /*
      * Constructor for the DB, there should be only one instance of the DB
      */
-    DB()
-    {
-        initDB();
-    }
+    DB() {}
 
 public:
     // Delete the copy constructor and assignment operator
@@ -37,13 +34,10 @@ public:
      */
     static DB &getInstance();
 
-    /* intialise the db with some data*/
-    void initDB();
-
     /* clear the db */
     void clearDB();
 
-    /* Add Moview to the db
+    /* Add Movie to the db
      * @param movie - pointer to Movie object to be added to the db
      */
     void addMovie(Movie *movie);

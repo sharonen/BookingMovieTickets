@@ -37,6 +37,13 @@ TEST_CASE("Checking Theater")
             REQUIRE(theater->getTheaterName() == "Regal Cinemas");
             REQUIRE(theater->getTheaterLocation() == "New York");
         }
+        THEN("the theater name and location can be changed")
+        {
+            theater->setTheaterName("AMC");
+            theater->setTheaterLocation("New Jersey");
+            REQUIRE(theater->getTheaterName() == "AMC");
+            REQUIRE(theater->getTheaterLocation() == "New Jersey");
+        }
     }
 }
 
