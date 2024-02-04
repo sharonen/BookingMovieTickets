@@ -58,3 +58,7 @@
 2. Add a support for running HTTP requests, using something like Crow https://crowcpp.org/master/
 3. Add support to generate documentation using Doxygen
 4. Add a support for running the project in a cloud environment, using something like AWS Lambda
+5. Extend the project to support more complex scenarios, like booking seats for a specific date and time
+6. Add a support for running the project in a mobile environment, using something like Flutter
+7. Add a support for running the project in a web environment, using something like React
+
